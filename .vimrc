@@ -58,13 +58,16 @@ set showmatch
 " How many tenths of a second to blink when matching brackets
 set mat=2
 
+" Enhanced completion.
+set wildmenu                    
+" Act like shell completion.
+set wildmode=list:longest       
+
 " No annoying sound on errors
 set noerrorbells
 set novisualbell
 set t_vb=
 set tm=500
-
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Fonts
@@ -89,9 +92,9 @@ set expandtab
 " Be smart when using tabs ;)
 set smarttab
 
-" 1 tab == 4 spaces
-set shiftwidth=4
-set tabstop=4
+" 1 tab == 2 spaces
+set tabstop=2
+set shiftwidth=2
 
 " Linebreak on 500 characters
 set lbr
