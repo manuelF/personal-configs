@@ -59,9 +59,6 @@ fi
 source ~/.git-prompt.sh
 #######################3
 
-
-
-
 if [ "$color_prompt" = yes ]; then
     PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\[\033[01;36m\]\h\[\033[00m\]:\[\033[01;34m\]\w$(__git_ps1 " (%s)")\[\033[00m\] \$ '
 else
@@ -115,14 +112,4 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 LC_ALL=en_US.UTF-8
-PATH=/usr/local/texlive/2014/bin/x86_64-linux/:$PATH
-export GOROOT=$HOME/go
-export GOPATH=$HOME/gomodules
-export PATH=$PATH:$GOROOT/bin
 
-export PATH=$PATH:/opt/ghc/head/bin:/opt/cabal/head/bin
-export PATH=$PATH:$HOME/.cabal/bin
-
-export PATH=/usr/lib/dart/bin:$PATH
-export PATH=$HOME/bin:$PATH
-. /opt/Modules/3.2.10/init/bash
