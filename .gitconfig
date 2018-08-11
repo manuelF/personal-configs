@@ -1,0 +1,10 @@
+[user]
+	name = manuelF
+	email = m.ferreria@gmail.com
+
+[alias]
+  st = status
+[color]
+  diff = auto
+  status = auto
+  branch = auto
