@@ -14,7 +14,7 @@ shopt -s histappend
 
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000000
-HISTFILESIZE=2000000
+HISTFILESIZE=20000000
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
@@ -107,16 +107,22 @@ alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
+
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
-#source /opt/intel/bin/compilervars.sh intel64
-PATH=/home/manuel/hadoop/hadoop-1.0.4/bin:$PATH
-PATH=/opt/matlab/bin:$PATH
-PATH=/usr/local/texlive/2013/bin/x86_64-linux:$PATH
+LC_ALL=en_US.UTF-8
+PATH=/usr/local/texlive/2014/bin/x86_64-linux/:$PATH
+export GOROOT=$HOME/go
+export GOPATH=$HOME/gomodules
+export PATH=$PATH:$GOROOT/bin
 
-#source /opt/Modules/3.2.10/init/bash
-#source /opt/Modules/3.2.10/init/bash_completion
+export PATH=$PATH:/opt/ghc/head/bin:/opt/cabal/head/bin
+export PATH=$PATH:$HOME/.cabal/bin
+
+export PATH=/usr/lib/dart/bin:$PATH
+export PATH=$HOME/bin:$PATH
+. /opt/Modules/3.2.10/init/bash
